@@ -1,18 +1,52 @@
+/*base
+#dc857b - медынй цвет
+#dededf - серебро
+
+
+
+*/
+
+body {
+    background: url(img/beige-tiles.jpg) 0 0 repeat;
+}
+
+.main {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
 .game {
     box-sizing: border-box;
-    padding: 24px 30px;
-    max-width: 500px;
     font-size: 16px;
     font-family: sans-serif;    
     box-shadow: 0 5px 12px 0 rgba(0,0,0,.15);
+    /*position: relative;*/
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 4px;
 }
 
 a {
     text-decoration: none;
 }
 
-.game *{
+.main *{
     box-sizing: border-box;
+    line-height: 1;
+}
+
+.game-area {
+    padding: 44px 30px 10px;
+}
+
+.game-title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
 }
 
 .game-head {
@@ -22,18 +56,95 @@ a {
     background: #eee;
 }
 
+.game-head > span {
+    display: inline-block;
+    margin-right: 20px;
+}
+
 .game-money__num {
     font-size: 26px;
 }
 
 .game-body {
+    padding: 0 30px;
+}
 
+.game-body .c-btn {
+    width: 100%;
+}
+
+.game-options {
+    position: absolute;
+    left: 105%;
+    top: 0;
+}
+
+.game-options a {
+    border: none;
+    box-shadow: 0 5px 12px 0 rgba(0,0,0,.15);
 }
 
 .c-btn-layout {
     display: block;
+    margin-bottom: 12px;
 }
 
+.game-status {
+    padding: 0 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    font-size: 12px;
+    color: #ccc;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-speed {
+
+}
+
+.game-export {
+    padding: 20px 30px;
+}
+
+#divLblExport {
+    word-wrap: break-word;
+    font-size: 14px;
+    color: #565656;
+}
+
+.game-export .c-btn {
+    width: 48%;
+    text-align: center;
+}
+
+.game-trade {
+    background: #eee;
+    padding: 14px 30px 24px;
+}
+
+.game-trade .c-btn {
+    width: 125px;
+    text-align: center;
+}
+
+#btnBuyCoppers {
+    background-color: #dc857b;
+    color: #fff;
+}
+
+#btnBuySilvers {
+    background-color: #dededf;
+}
+
+.game-trade .game-trade__item {
+    font-size: 14px;
+    color: #7b7b7b;
+}
 
 .game-error {
     color: rgb(226, 81, 81);
@@ -45,11 +156,16 @@ a {
     text-align: center;
 }
 
+.c-btn-layout--right {
+    text-align: right;
+}
 
 .c-btn {
     display: inline-block;
     padding: 10px 14px;
     border: 2px solid #ccc;
     color: #000;
-    border-radius: 10px;      
+    border-radius: 10px;
+    margin-bottom: 8px;
+    background-color: #fff;
 }

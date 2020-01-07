@@ -9,14 +9,45 @@
 <body>
     <main class="main">
         <div class="game">
-            <div class="game-head">Медные монеты: <span class="game-money__num" id="spnCoppersValue">0</span></div>
-            <div class="game-body">
-                <div class="c-btn-layout c-btn-layout--center">
-                    <a href="#" id="btnUpgCopperMine" class="c-btn">Улучшить медную шахту, 10 медных монет</a>
-                </div>                
+            <div class="game-area">
+                <div class="game-head">
+                    <span>Медные монеты: <span class="game-money__num" id="spnCoppersValue">0</span> </span>
+                    <span>Серебро: <span class="game-money__num" id="spnSilverValue">0</span></span>
+                </div>
+                <div class="game-status">
+                    <div class="game-level">Медная шахта lvl <span id="spnCoppersLevel">1</span> | Серебряная шахта lvl <span id="spnSilversLevel">0</span></div>
+                    <div class="game-speed"><span id="spnCoppersRate">1</span> монета в 2 секунды</div>
+                </div>
+
+
+                <div class="game-body">
+                    <div class="c-btn-layout c-btn-layout--center">
+                        <a href="#" id="btnUpgCopperMine" class="c-btn">Улучшить медную шахту, 10 медных монет</a>
+                        <a href="#" id="btnUpgSilverMine" class="c-btn">Построить серебряную шахту, 1 серебряная</a>
+                    </div>
+                    <div class="game-options c-btn-layout c-btn-layout--right">
+                        <a href="#" id="btnSaveGame" class="c-btn">Save</a>
+                        <a href="#" id="btnLoadGame" class="c-btn">Load</a>
+                    </div>
+                </div>
+                <div class="game-error" id="game-error"></div>
             </div>
-            <div class="game-error" id="game-error"></div>
+            <div class="game-trade">
+                <h3 class="game-title">Покупка монет</h3>
+                <div class="game-trade__item"><a href="#" id="btnBuyCoppers" class="c-btn">100 медных</a> = 1 серебряная</div>
+                <div class="game-trade__item"><a href="#" id="btnBuySilvers" class="c-btn">1 серебряный</a> = 100 медных</div>
+
+            </div>
+
         </div>
+        <div class="game">
+            <div class="game-export">
+                <a href="#" class="c-btn" id="btnExportGame" onclick="exportGame()">Экспортировать игру</a>
+                <a href="#" id="btnImportGame" class="c-btn" onclick="importGame()">Импортировать игру</a>
+                <div id="divLblExport" style="display: none"></div>
+            </div>
+        </div>
+
     </main>
     
     <script src="script.js"></script>
